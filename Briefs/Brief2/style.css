@@ -1,6 +1,7 @@
 body{
     margin: 0;
     background-color: azure;
+    font-family: sans-serif;
 }
 header{
     height: 80px;
@@ -38,6 +39,7 @@ nav{
 }
 #card img {
     width: 30px;
+    margin-right: 15px;
     height:30px;
 }
 ul{
@@ -62,6 +64,7 @@ a{
 }
 section{
     padding: 40px;
+    height: 100vh;
 }
 #prdList{
     display: flex;
@@ -99,4 +102,26 @@ section{
 }
 .success{
     color: rgb(25, 202, 25);
+}
+footer{
+    height: 80px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+}
+footer div {
+    width: 33%;
+    height: 100%;
+}
+footer ul {
+    display: block;
+}
+footer ul li {
+    padding: 0;
+}
+footer ul li a {
+    font-size: 13px;
+    color: rgb(198, 204, 243);
+    text-decoration: underline;
 }
