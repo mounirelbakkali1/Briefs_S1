@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    background-color: azure;
+}
+header{
+    height: 80px;
+    display: flex;
+    background-color: black;
+}
+nav{
+    display: flex; 
+    text-align: center;
+    align-items: center;
+    margin-left: 20px;
+    width: 80%;
+    justify-content: space-between; 
+    color: white;
+
+     
+}
+#logo {
+    display: flex;
+}
+#logo img{
+    width: 50px;
+}
+#logo h3{
+    font-family:  sans-serif;
+    margin-left: 20px;
+}
+#card {
+    display: inherit;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+#card img {
+    width: 30px;
+    height:30px;
+}
+ul{
+    display: flex;
+    padding: 0px;
+}
+ul .nav-item{
+    list-style-type: none;
+    padding: 15px;
+}
+ul li{
+    list-style-type: none;
+    padding: 5px;
+}
+ul .nav-item:hover {
+    background-color: white;
+    color: black ;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+section{
+    padding: 40px;
+}
+#prdList{
+    display: flex;
+    width: 80%;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.card {
+    width: 18%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card h3{
+    text-transform: capitalize;
+}
+.card p{
+    margin: 5px 0;
+}
+.card img {
+    width: 100%;
+    
+}
+.card a{
+    background-color: rgb(115 132 255);
+    color: white;
+    padding: 10px;
+}
+.card-footer{
+    padding: 10px;
+    margin :20px 0;
+}
+.rrp{
+    color: grey;
+}
+.success{
+    color: rgb(25, 202, 25);
+}
