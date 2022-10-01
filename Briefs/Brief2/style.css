@@ -1,34 +1,39 @@
-body{
+body {
     margin: 0;
-    background-color: azure;
+    background-color: #011a04;
+    color: white;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
-header{
+header {
     height: 80px;
     display: flex;
-    background-color: black;
+    background-color: #13381a;
 }
-nav{
-    display: flex; 
+
+nav {
+    display: flex;
     text-align: center;
     align-items: center;
     margin-left: 20px;
     width: 80%;
-    justify-content: space-between; 
+    justify-content: space-between;
     color: white;
-
-     
 }
+
 #logo {
     display: flex;
 }
-#logo img{
+
+#logo img {
     width: 50px;
 }
-#logo h3{
-    font-family:  sans-serif;
+
+#logo h3 {
+    font-family: sans-serif;
     margin-left: 20px;
 }
+
 #card {
     display: inherit;
     align-items: center;
@@ -37,91 +42,201 @@ nav{
     right: 20px;
     top: 25px;
 }
+
 #card img {
-    width: 30px;
+    width: 35px;
     margin-right: 15px;
-    height:30px;
+    height: 35px;
+    padding: 5px;
+    box-sizing: border-box;
 }
-ul{
+#card img:hover {
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+ul {
     display: flex;
     padding: 0px;
 }
-ul .nav-item{
+
+ul .nav-item {
     list-style-type: none;
     padding: 15px;
 }
-ul li{
+
+ul li {
     list-style-type: none;
     padding: 5px;
 }
+
 ul .nav-item:hover {
     background-color: white;
-    color: black ;
+    color: black;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-section{
+
+section {
     padding: 40px;
-    height: 100vh;
+    overflow-y: scroll;
+    margin: 20px 0 40px 0;
 }
-#prdList{
-    display: flex;
-    width: 80%;
-    margin-top: 20px;
-    justify-content: space-between;
-}
-.card {
-    width: 18%;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.card h3{
-    text-transform: capitalize;
-}
-.card p{
-    margin: 5px 0;
-}
-.card img {
+
+#prdList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2% 1%;
     width: 100%;
+    height: max-content;
     
 }
-.card a{
-    background-color: rgb(115 132 255);
+
+.card {
+    /*min-width: 12%;*/
+    padding: 20px;
+    background-color: #ffffff00;
+    box-shadow: 0 1px 15px 0 rgb(198 198 198 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.card-footer {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.card h3 {
+    text-transform: capitalize;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card img {
+    width: 70%;
+    margin: auto;
+    transform: translate(20%, 0%);
+}
+
+.card button {
+    background-color: rgb(34 53 34);
+    outline: 1px solid #00c833;
+    border: none;
     color: white;
     padding: 10px;
+    width: 100%;
 }
-.card-footer{
-    padding: 10px;
-    margin :20px 0;
+.card button:hover{
+    background-color: #00c833;
+    color: #13381a;
 }
-.rrp{
+
+.rrp {
     color: grey;
 }
-.success{
+
+.success {
     color: rgb(25, 202, 25);
 }
-footer{
+
+footer {
     height: 80px;
-    background-color: black;
+    background-color: #13381a;
     color: white;
     padding: 20px;
     display: flex;
 }
+
 footer div {
     width: 33%;
     height: 100%;
 }
+
 footer ul {
     display: block;
 }
+
 footer ul li {
     padding: 0;
 }
+
 footer ul li a {
     font-size: 13px;
     color: rgb(198, 204, 243);
     text-decoration: underline;
+}
+
+#toggle,
+#nav-group {
+    align-items: center;
+    display: none;
+}
+
+#toggle button {
+    background-color: transparent;
+    border: none;
+    transform: translate(10px, 70%);
+}
+
+.swal-modal {
+    box-shadow: 0 1px 15px 0 rgb(240 240 240 / 20%), 0 6px 20px 0 rgb(255 255 255 / 24%);
+
+}
+
+.validate{
+    background-color: #00c83248;
+}
+.confirm{
+    background-color: rgb(25, 202, 25);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.confirm:hover{
+    background-color: rgb(25, 202, 25) !important;
+    color: white;
+} 
+
+
+
+@media only screen and (max-width: 600px) {
+    #prdList {
+        grid-template-columns: auto auto;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #toggle {
+        display: block;
+
+    }
+
+    #nav-group {
+        padding: 10px;
+        transform: translate(0, 20px);
+        width: 100vw;
+        background-color: #13381a;
+        z-index: 100;
+    }
+
+    #nav-group ul {
+        display: block;
+    }
+    body {
+        z-index: 1;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width:1200px) {
+    #prdList {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    div#logo h3 {
+        display: none;
+    }
 }
