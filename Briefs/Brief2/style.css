@@ -1,14 +1,23 @@
+:root {
+    --main_color: #000000;
+    --secondary_color: #000000;
+    --cta_color: #72ff00bf;
+    --bg-btns: rgb(10 21 10 / 10%);
+    --card: #9f9f9f29;
+}
+
 body {
     margin: 0;
-    background-color: #011a04;
+    background-color: var(--main_color);
     color: white;
     font-family: sans-serif;
     overflow-x: hidden;
+    font-size: 0.9rem;
 }
 header {
     height: 80px;
     display: flex;
-    background-color: #13381a;
+    background-color: var(--secondary_color);
 }
 
 nav {
@@ -42,7 +51,10 @@ nav {
     right: 20px;
     top: 25px;
 }
-
+#card button{
+    background:none;
+    border: none;
+}
 #card img {
     width: 35px;
     margin-right: 15px;
@@ -86,28 +98,27 @@ section {
     margin: 20px 0 40px 0;
 }
 
+
 #prdList {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 2% 1%;
+    margin-top: 20px;
+    column-gap: 15px;
     width: 100%;
     height: max-content;
-    
+    row-gap: 15px;
 }
-
 .card {
-    /*min-width: 12%;*/
     padding: 20px;
-    background-color: #ffffff00;
+    border-radius: 6px;
+    background-color: var(--card);
     box-shadow: 0 1px 15px 0 rgb(198 198 198 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
-
 .card-footer {
     width: 100%;
     margin-top: 25px;
     text-align: center;
 }
-
 .card h3 {
     text-transform: capitalize;
 }
@@ -123,16 +134,17 @@ section {
 }
 
 .card button {
-    background-color: rgb(34 53 34);
-    outline: 1px solid #00c833;
+    background-color: var(--bg-btns);
+    outline: 1px solid var(--cta_color);
     border: none;
     color: white;
+    border-radius: 6px;
     padding: 10px;
     width: 100%;
 }
 .card button:hover{
-    background-color: #00c833;
-    color: #13381a;
+    background-color: var(--cta_color);
+    color: var(--bg-card);
 }
 
 .rrp {
@@ -140,20 +152,16 @@ section {
 }
 
 .success {
-    color: rgb(25, 202, 25);
+    color: var(--cta_color);
 }
 
 footer {
     height: 80px;
-    background-color: #13381a;
+    background-color:var(--secondary_color);
     color: white;
     padding: 20px;
-    display: flex;
-}
-
-footer div {
-    width: 33%;
-    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 footer ul {
@@ -166,7 +174,7 @@ footer ul li {
 
 footer ul li a {
     font-size: 13px;
-    color: rgb(198, 204, 243);
+    color: var(--cta_color);
     text-decoration: underline;
 }
 
@@ -187,22 +195,12 @@ footer ul li a {
 
 }
 
-.validate{
-    background-color: #00c83248;
-}
-.confirm{
-    background-color: rgb(25, 202, 25);
-    color: white;
+.confirm, .confirm:hover ,.confirm:not([disabled]):hover{
+    background-color: var(--cta_color);
+    color: black;
     border: 1px solid white;
     border-radius: 5px;
 }
-.confirm:hover{
-    background-color: rgb(25, 202, 25) !important;
-    color: white;
-} 
-
-
-
 @media only screen and (max-width: 600px) {
     #prdList {
         grid-template-columns: auto auto;
@@ -221,15 +219,14 @@ footer ul li a {
         padding: 10px;
         transform: translate(0, 20px);
         width: 100vw;
-        background-color: #13381a;
+        background-color: var(--secondary_color);
         z-index: 100;
     }
-
     #nav-group ul {
         display: block;
     }
     body {
-        z-index: 1;
+        z-index: 0;
     }
 }
 @media only screen and (min-width: 600px) and (max-width:1200px) {
