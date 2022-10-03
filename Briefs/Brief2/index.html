@@ -14,14 +14,13 @@
     <header>
         <nav>
             <div id="logo">
-                <img src="./img/104231_games_icon.png" alt="logo">
-                <h3>G4EveryOne</h3>
+                <h3 style="text-transform:uppercase;"><span style="color:var(--cta_color);">G4</span>One</h3>
             </div>
             <div>
                 <ul>
-                    <li class="nav-item"><a href="">Vedios to Rent</a></li>
-                    <li class="nav-item"><a href="">Vedios to Buy</a></li>
-                    <li class="nav-item"><a href="">Used DVDs</a></li>
+                    <li class="nav-item"><a href="">Games to try</a></li>
+                    <li class="nav-item"><a href="">VIP Games</a></li>
+                    <li class="nav-item"><a href="">popular</a></li>
                     <li class="nav-item"><a href="">Offers</a></li>
                 </ul>
             </div>
@@ -30,20 +29,40 @@
             <button><img src="./img/icons8-menu-30 (1).png" alt=""></button>
             <div id="nav-group">
                 <ul>
-                    <li class="nav-item"><a href="">Vedios to Rent</a></li>
-                    <li class="nav-item"><a href="">Vedios to Buy</a></li>
-                    <li class="nav-item"><a href="">Used DVDs</a></li>
+                    <li class="nav-item"><a href="">Games to try</a></li>
+                    <li class="nav-item"><a href="#prdList">VIP Games</a></li>
+                    <li class="nav-item"><a href="">popular</a></li>
                     <li class="nav-item"><a href="">Offers</a></li>
+                    <li class="nav-item" id="u"><a href="./contactUs.html">Contact Us</a></li><!--style="background-color:var(--cta_color) !important;"-->
                 </ul>
             </div>
         </div>
         <div id="card">
             <button id="cardBtn"><img src="./img/icons8-shopping-cart-96.png" alt=""></button>
             <button id="userBtn"><img src="./img/icons8-user-96.png" alt=""></button>
+          
+        </div>
+        <div id="suggestSignInSignUp">
+            <p class="rrp">have you an account ?</p>
+            <a href="./signin.html">Sign in</a>
+            <p class="rrp">New  ?</p>
+            <a href="./signup.html">Create an account</a>
+        </div>
+        <div id="shoppingCart">
+           <!-- <img src="./img/532806_cart_delete_ecommerce_empty_online shopping_icon.png" alt="">-->
         </div>
         
     </header>
-    <section>
+    <section id="home">
+        <div id="bg" style="z-index: 999;">
+           <div id="homeContent">
+                <h1 style="color: var(--cta_color);">G 4 ONE </h1>
+                <p style="color: white;margin-bottom: 30px;">hello world !</p>
+                <a href="#prdList" style="color: black;">BUY A GAME</a>
+           </div>
+        </div>
+    </section>
+    <section id="Vedios_to_Buy">
         <div id="mini-menu">
             <ul>
                 <li><a href="">HOME &nbsp;&nbsp; /</a></li>
@@ -191,20 +210,23 @@
         </div>
     </section>
     <footer>
-        <div>
-            <a href=""> Terms and Conditions</a>
+        <div class="footer">
+            <div>
+                <a href=""> Terms and Conditions</a><br>
+                <a href="">Privacy Policy</a><br>
+                <a href="contactUs.html" style="color: var(--cta_color);">Contact Us</a>
+            </div>
+            <div></div>
+            <div>
+                <a href="">Our Products</a>
+                <ul>
+                    <li class="footer-item"><a href="">Games to try</a></li>
+                    <li class="footer-item"><a href="">VIP Games</a></li>
+                </ul>
+            </div>
+            
         </div>
-        <div>
-            <a href="">Our Products</a>
-            <ul>
-                <li class="footer-item"><a href="">Vedios to Rent</a></li>
-                <li class="footer-item"><a href="">Vedios to Buy</a></li>
-                <li class="footer-item"><a href="">Used DVDs</a></li>
-            </ul>
-        </div>
-        <div>
-
-        </div>
+       <p> <span style="color:var(--cta_color);"> Mounir El Bakkali &nbsp; </span>&copy;&nbsp; All right reserved </p>
     </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -213,8 +235,15 @@
         $("#toggle").click(function () {
             $(this).find("#nav-group").slideToggle("slow");
         });
+        $("#u").click(function(){
+            window.location.href = 'contactUs.html';
+        });
+        $("#userBtn").click(function(){
+            $(this).parent().parent().find("#suggestSignInSignUp").slideToggle("slow");
+        });
         $(".card-footer button").click(function () {
             swal({
+                className:"swal-custom",
                 title: [$(this).parent().parent().find("p:first").text()],
                 text: "Once validated, your credit card will be debited",
                 icon: "info",

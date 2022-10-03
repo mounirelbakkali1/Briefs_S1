@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+        body{
+            height: 100vh;
+            background-image: url('./img/bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: sans-serif;
+            overflow: hidden;
+            text-align: center;
+            align-items: center;
+            color: aquamarine;
+        }
+        h1{
+            font-family: 'Silkscreen', cursive;
+        }
+        #formContainer{
+            width: 40%;
+            padding: 20px;
+            transform: translate(0px, 15%);
+            margin: 0 auto;
+            background-color: #7fffd45e;
+            border-radius: 20px;
+        }
+        form{
+            margin-bottom: 10px;
+        }
+        ::placeholder{
+            color: aquamarine;
+            opacity: 0.5;
+        }
+        input, textarea {
+            padding: 10px;
+            color: white;
+            font-size: 14px;
+            width: 75%;
+            margin-top: 7px;
+            border-radius: 10px;
+            border: none;
+            background: #0000009c;
+        }
+        input:focus-visible, textarea:focus-visible{
+            outline-color: aquamarine;
+        } 
+        input[type="submit"]{
+            background-color: aquamarine;
+            color: black;
+            text-transform: uppercase;
+        }
+        @media only screen and (max-width:750px) {
+            #formContainer{
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="formContainer">
+        <h1>GET IN TOUCH WITH US</h1>
+        <form action="" >
+            <div>
+                <span></span>
+                <input class="input" type="text" placeholder="First Name" required><br>
+            </div>
+            <div>
+                <span></span>
+                <input type="text" placeholder="Second Name" required><br>
+            </div>
+            <div>
+                <span></span>
+                <input type="text" placeholder="Email" required><br>
+            </div>
+            <div>
+                <span></span>
+                <input type="text" placeholder="Topic" required><br>
+            </div>
+            <div>
+                <span></span>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea><br>
+            </div>
+            <input id="btn" type="submit" value="Send" >
+        </form>
+    </div>
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+            $('#btn').click(function() {
+            var errors = 0;
+            $("form :input").map(function(){
+                if( !$(this).val() ) {
+                    $(this).parent().find("span").text("*Required");
+                    errors++;
+                } else if ($(this).val()) {
+                    $(this).parent().find("span").text("");
+                }   
+            });
+            if(errors > 0){
+                $('span').text("All fields are required");
+                return false;
+            }else{
+                swal("Sent !","We'll reply as soon as possible !", {
+                            icon: "success", 
+                            buttons: false,
+                            timer: 2000,
+                            
+                        });
+                const myTimeout = setTimeout(redirect, 4000);
+                function redirect(){
+                    window.location.href = 'index.html';
+                }
+                return false;
+            }
+        });
+        
+    });
+</script>
+</html>
