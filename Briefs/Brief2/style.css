@@ -206,18 +206,56 @@ footer{
     border: none;
     transform: translate(10px, 70%);
 }
-div#suggestSignInSignUp {
-    background-color: #03091a;
+div#suggestSignInSignUp ,div#shoppingCart {
+    /*HERE*/
+    background-color: #ffffffd6;
     padding: 65px 35px;
     box-sizing: border-box;
     line-height: 43px;
     position: absolute;
+    border-radius: 20px 0 20px 0;
     z-index: 11111;
-    top: 55px;
+    top: 74px;
     display: none;
-    right: 0px;
+    right: 42px;
 }
-div#suggestSignInSignUp a {
+div#shoppingCart{
+    right: 105px !important;
+    text-align: center;
+
+}
+
+#shoppingCart p {
+    color: #fc6b55;
+    font-weight: bold;
+}
+div#shoppingCart::before{
+    right: 25px;
+}
+/*ADDDED THIS*/
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    border: none;
+  }
+  
+  table td, table th {
+    padding: 1px;
+    border: none;
+  }  
+  table tr {background-color: rgb(130, 130, 130);}
+  
+div#suggestSignInSignUp::before,div#shoppingCart::before{
+    position: absolute;
+    display: inline-block;
+    content: "";
+    border: 8px solid transparent;
+    border-bottom-color: #ffffffd6;
+    top: -16px;
+    right: 9px;
+    left: auto;
+}
+div#suggestSignInSignUp a { 
     background-color: var(--cta_color);
     padding: 8px;
     color: var(--main_color);
