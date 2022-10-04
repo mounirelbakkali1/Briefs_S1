@@ -38,7 +38,7 @@
             </div>
         </div>
         <div id="card">
-            <button id="cardBtn"><img src="./img/icons8-shopping-cart-96.png" alt=""></button>
+            <button id="cardBtn" class="cardBtn"><img src="./img/icons8-shopping-cart-96.png" alt=""></button>
             <button id="userBtn"><img src="./img/icons8-user-96.png" alt=""></button>
           
         </div>
@@ -54,24 +54,11 @@
            <p>No product added here </p>
            </div>
             <div id="somePrd">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>prd1</td>
-                            <td>19.99$</td>
-                        </tr>
-                        <tr>
-                            <td>prd2</td>
-                            <td>22.99$</td>
-                        </tr>
-                        <tr style="background-color:var(--cta_color);">
-                            <td>Total</td>
-                            <td>42.99$</td>
-                        </tr>
-                    
-                    </tbody>
+                <table id="tableOfPrd">
+                    <tbody></tbody>
                 </table>
-                <button>BUY NOW</button>
+                <p id="total">Total : <span></span></p>
+                <button id="buyNow">BUY NOW</button>
            </div>
         </div>
         
@@ -89,8 +76,8 @@
         <div id="mini-menu">
             <ul>
                 <li><a href="">HOME &nbsp;&nbsp; /</a></li>
-                <li><a href="">Used DVDs &nbsp;&nbsp; /</a></li>
-                <li><a href="">Less 10$ &nbsp;&nbsp; </a></li>
+                <li><a href="">GAMES TO TRY &nbsp;&nbsp; /</a></li>
+                <li><a href="">VIP GAMMES &nbsp;&nbsp; </a></li>
             </ul>
         </div>
         <div id="less10$">
@@ -103,7 +90,7 @@
                 <img src="./img/4737379_games_gaming_rocket leage_rocketleague_squircle_icon.png" alt="">
                 <h3 class="card-title">rocket leage</h3>
                 <small class="rrp">RRP : 16.99 $</small>
-                <p>Price you pay : 12.99 $</p>
+                <p>Price you pay :<span class="prx">12.99</span>$</p>
                 <p class="success">Your saving : 4 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -115,7 +102,7 @@
                 <img src="./img/4737385_fortnite_games_gaming_multiplayer_squircle_icon.png" alt="">
                   <h3 class="card-title">fortnite games</h3>
                   <small class="rrp">RRP : 33 $</small>
-                  <p>Price you pay : 22.99 $</p>
+                  <p>Price you pay :<span class="prx"> 22.99</span>$</p>
                   <p class="success">Your saving : 11 $</p>    
                     <div class="card-footer">
                     <button>Add To Card</button>
@@ -126,7 +113,7 @@
                 <img src="./img/4737388_counter-strike_counterstrike_cs_games_gaming_icon.png" alt="">
                 <h3 class="card-title">counter strike</h3>
                 <small class="rrp">RRP : 27.99 $</small>
-                <p>Price you pay : 18.99 $</p>
+                <p>Price you pay :<span class="prx"> 18.99</span>$</p>
                 <p class="success">Your saving : 9 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -137,7 +124,7 @@
                 <img src="./img/78903_games_icon.png" alt="">
                 <h3 class="card-title">arcade games</h3>
                 <small class="rrp">RRP : 24.99 $</small>
-                <p>Price you pay : 19.99 $</p>
+                <p>Price you pay :<span class="prx">19.99</span>$</p>
                 <p class="success">Your saving : 5 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -147,8 +134,8 @@
             <div class="card">
                 <img src="./img/4527378_game_lightbringer_of_series_sword_icon.png" alt="">
                 <h3 class="card-title">arcade games</h3>
-                <small class="rrp">RRP : 9.99 $</small>
-                <p>Price you pay : 7.99 $</p>
+                <small class="rrp">RRP :<span class="prx"> 9.99</span>$</small>
+                <p>Price you pay :<span class="prx">7.99</span>$</p>
                 <p class="success">Your saving : 2 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -159,7 +146,7 @@
                 <img src="./img/7326_arcade_games_package_poker_icon.png" alt="">
                 <h3 class="card-title">arcade games</h3>
                 <small class="rrp">RRP : 39 $</small>
-                <p>Price you pay : 29.99 $</p>
+                <p>Price you pay :<span class="prx">29.99 </span>$</p>
                 <p class="success">Your saving : 10 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -170,7 +157,7 @@
                 <img src="./img/7763771_video_game_ea_icon.png" alt="">
                 <h3 class="card-title">counter strike</h3>
                 <small class="rrp">RRP : 66.99 $</small>
-                <p>Price you pay : 51.99 $</p>
+                <p>Price you pay :<span class="prx">51.99</span>  $</p>
                 <p class="success">Your saving : 15 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -181,7 +168,7 @@
                 <img src="./img/1337538_game_go_poke_pokemon_star_icon.png" alt="">
                 <h3 class="card-title">counter strike</h3>
                 <small class="rrp">RRP : 29.99 $</small>
-                <p>Price you pay : 21.99 $</p>
+                <p>Price you pay :<span class="prx">22.99</span> $</p>
                 <p class="success">Your saving : 8 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -191,7 +178,7 @@
                 <img src="./img/2730377_character_game_gigantic_inkcontober_pakko_icon.png" alt="">
                 <h3 class="card-title">counter strike</h3>
                 <small class="rrp">RRP : 18 $</small>
-                <p>Price you pay : 11.99 $</p>
+                <p>Price you pay :<span class="prx">11.99</span> $</p>
                 <p class="success">Your saving : 6 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -202,7 +189,7 @@
                 <img src="./img/1337499_game_go_play_pokemon_zubat_icon.png" alt="">
                 <h3 class="card-title">fortnite games</h3>
                 <small class="rrp">RRP : 49.99 $</small>
-                <p>Price you pay : 39.99 $</p>
+                <p>Price you pay :<span class="prx">39.99</span> $</p>
                 <p class="success">Your saving : 10 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -212,7 +199,7 @@
                 <img src="./img/2730372_character_dota2_game_inkcontober_juggernaut_icon.png" alt="">
                 <h3 class="card-title">fortnite games</h3>
                 <small class="rrp">RRP : 33 $</small>
-                <p>Price you pay : 22.99 $</p>
+                <p>Price you pay :<span class="prx">22.99</span> $</p>
                 <p class="success">Your saving : 11 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -222,7 +209,7 @@
                 <img src="./img/2730367_box_inkcontober_pandora_shattered_square_icon (1).png" alt="">
                 <h3 class="card-title">fortnite games</h3>
                 <small class="rrp">RRP : 19 $</small>
-                <p>Price you pay : 12.99 $</p>
+                <p>Price you pay :<span class="prx">12.99</span> $</p>
                 <p class="success">Your saving : 6 $</p>
                 <div class="card-footer">
                     <button class="">Add To Card</button>
@@ -253,67 +240,6 @@
     </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        var prdExt=false;
-        $("#toggle").click(function () {
-            $(this).find("#nav-group").slideToggle("slow");
-        });
-        $("#u").click(function(){
-            window.location.href = 'contactUs.html';
-        });
-        $("#userBtn").click(function(){
-            $(this).parent().parent().find("#suggestSignInSignUp").toggle();
-            $(this).parent().parent().find("#shoppingCart").hide();
-        });
-        $("#cardBtn").click(function(){
-            
-            if(prdExt) $(this).parent().parent().find("#shoppingCart").find("#somePrd").hide();
-            else $(this).parent().parent().find("#shoppingCart").find("#noPrd").hide();
-
-            $(this).parent().parent().find("#shoppingCart").toggle();
-            $(this).parent().parent().find("#suggestSignInSignUp").hide();
-
-        });
-        $(".card-footer button").click(function () {
-            swal({
-                className:"swal-custom",
-                title: [$(this).parent().parent().find("p:first").text()],
-                text: "Once validated, your credit card will be debited",
-                icon: "info",
-                buttons: {
-                    cancel: {
-                        text: "Cancel",
-                        value: null,
-                        visible: true,
-                        className: "",
-                        closeModal: true,
-                    },
-                    confirm: {
-                        text: "Confirm Order",
-                        value: true,
-                        visible: true,
-                        className: "confirm",
-                        closeModal: true
-                    }
-                },
-                dangerMode: false,
-            })
-                .then((confirm) => {
-                    if (confirm) {
-                        prdExt=true;
-                        swal("Great !","Enjoy gamming !", {
-                            icon: "success", 
-                            buttons: false,
-                            timer: 2000,
-                            
-                        });
-                    } else {
-                        swal("search for other product !");
-                    }
-                });
-        });
-    });
-</script>
+<script src="./main.js"></script>
 
 </html>

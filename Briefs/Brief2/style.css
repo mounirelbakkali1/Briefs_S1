@@ -58,6 +58,15 @@ p{
     right: 20px;
     top: 20px;
 }
+#card .cardBtn.added::before{
+    position: absolute;
+    display: inline-block;
+    content: "";
+    background-color: #00ff9e;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+}
 #card button{
     background:none;
     border: none;
@@ -73,9 +82,7 @@ p{
     border: 1px solid var(--cta_color);
     border-radius: 50px;
 }
-#shoppingCart{
-    
-}
+
 
 ul {
     display: flex;
@@ -208,7 +215,8 @@ footer{
 }
 div#suggestSignInSignUp ,div#shoppingCart {
     /*HERE*/
-    background-color: #ffffffd6;
+    background-color: white;
+    color: #03091a;
     padding: 65px 35px;
     box-sizing: border-box;
     line-height: 43px;
@@ -222,7 +230,14 @@ div#suggestSignInSignUp ,div#shoppingCart {
 div#shoppingCart{
     right: 105px !important;
     text-align: center;
+    width: 35%;
 
+}
+#shoppingCart button{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary_color);
+    color: white;
 }
 
 #shoppingCart p {
@@ -243,14 +258,14 @@ table {
     padding: 1px;
     border: none;
   }  
-  table tr {background-color: rgb(130, 130, 130);}
+  table tr {background-color:rgb(3 9 26 / 11%);}
   
 div#suggestSignInSignUp::before,div#shoppingCart::before{
     position: absolute;
     display: inline-block;
     content: "";
     border: 8px solid transparent;
-    border-bottom-color: #ffffffd6;
+    border-bottom-color: white;
     top: -16px;
     right: 9px;
     left: auto;
@@ -303,6 +318,10 @@ div#suggestSignInSignUp a {
     }
     body {
         z-index: 0;
+    }
+    div#shoppingCart{
+        width: 55%;
+    
     }
 }
 @media only screen and (min-width: 600px) and (max-width:1200px) {
