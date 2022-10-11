@@ -104,6 +104,7 @@ $(document).ready(function () {
     }).then((confirm) => {
       if (confirm) {
         prdExt = false;
+        total = 0;
         $("#cardBtn").removeClass("added");
         $("#tableOfPrd tbody").empty();
         $("#total").find("span").text("");
