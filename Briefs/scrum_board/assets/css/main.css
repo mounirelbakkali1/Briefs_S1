@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600;1,800&display=swap');
 :root{
-  --main-color:#FF1616;
+  --main-color:#ff5959;
   --nav-color:#FFF6F6;
   --btn-color:#F1E9E9;
   --card-color:#EFEFEF;
+  --p-color: #98999a;
   --font : 'Poppins', sans-serif;
 }
-
-
+* {
+  box-sizing: border-box;
+  letter-spacing: 0.5px;
+}
+body{
+  height: 100vh;
+}
 
 header{
   background-color: var(--nav-color);
+  flex-wrap: wrap;
+  gap: 10px;
 }
 header div .butn{
   background-color: var(--btn-color);
@@ -32,12 +40,25 @@ button.butn.create{
   font-size: 1.3rem;
   font-weight: 600;
 }
-.card.p-2.w-100 {
+img.card-image {
+  width: 45px;
+  transform: translateY(100%);
+  /*in order to center the element in the middle :*/
+}
+
+.iconProgress {}
+
+div.card {
   display: grid;
   grid-template-columns: auto auto;
+  border-radius: 10px;
+  }
+  
+  .card-footer {
+    padding-right: 0px;
 }
 .card-footer button{
-  padding: 3px 10px;
+  padding: 1px 20px;
   color: white;
   border-radius: 8px;
   background-color: var(--main-color);
@@ -45,9 +66,13 @@ button.butn.create{
   border: none;
 }
 .card-footer button.priority{
-  border: 1px solid var(--main-color);
+  border: 2px solid var(--main-color);
   background-color: transparent;
   color: var(--main-color);
+}
+p {
+  margin-bottom: 2px;
+  color: var(--p-color);
 }
 
 #addTask{
@@ -58,4 +83,18 @@ button.butn.create{
   width: 140px;
   text-align: center;
   font-family: var(--font);
+}
+.scroll {
+  max-height: 67vh;
+  overflow: scroll;
+}
+#addTaskPage{
+  position: absolute;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  background-color: rgba(255, 254, 254, 0.969);
+
 }
