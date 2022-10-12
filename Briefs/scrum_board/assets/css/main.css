@@ -22,10 +22,34 @@ header div .butn{
 button.butn.create{
   justify-content: center !important;
 }
-
-header div .btn img{
-  width: 80%;
+.navbar-brand img{
+  width: 70%;
 }
+.card-title {
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.card.p-2.w-100 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.card-footer button{
+  padding: 3px 10px;
+  color: white;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  margin-inline: 1%;
+  border: none;
+}
+.card-footer button.priority{
+  border: 1px solid var(--main-color);
+  background-color: transparent;
+  color: var(--main-color);
+}
+
 #addTask{
   background-color:var(--main-color);
   padding: 10px;
