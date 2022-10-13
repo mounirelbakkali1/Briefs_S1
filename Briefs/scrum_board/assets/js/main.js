@@ -1,20 +1,17 @@
 var imgCard1 = "icons8-cloud-waiting-100.png";
 var imgCard2 = "icons8-cloud-waiting-100.png";
 var imgCard3 = "icons8-wait-96.png";
-
+function checkStatus(status) {
+  return status == "To do" ? imgCard1 : status == "Doing" ? imgCard2 : imgCard3;
+}
 function addTaskNode(title, type, priority, status, dateTask, desc) {
-  let ok = true;
-
-  var card =
-    `<div class="card px-2 w-100 " style="width: 18rem;">
+  var card = `<div class="card px-2 w-100 " style="width: 18rem;">
 <div class="iconProgress">
-    <img class="card-image" src="./assets/${
-      status == "To do" ? imgCard1 : status == "Doing" ? imgCard2 : imgCard3
-    }" alt="" srcset="">
+    <img class="card-image" src="./assets/${checkStatus(
+      status
+    )}" alt="" srcset="">
   </div>
-  <div class="card-body pb-1">` +
-    (ok ? "yes" : "no") +
-    `
+  <div class="card-body pb-1">
     <h5 class="card-text">${title}</h5>
     <!--Date-->
     <p>#1 assigned in ${dateTask}</p>
@@ -35,10 +32,6 @@ function addTaskNode(title, type, priority, status, dateTask, desc) {
   } else if (status == "Done") {
     $(card).appendTo("#done");
   }
-  $("#taskTitle").text("");
-  $("#description").text("");
-  $("#date").val(new Date().toDateInputValue());
-  $("#addTaskPage").hide("slow");
 }
 
 $(document).ready(function () {
@@ -60,5 +53,6 @@ $(document).ready(function () {
       date.getDay() + "/" + date.getMonth() + "/" + date.getFullYear();
     var desc = $("#description").val();
     addTaskNode(title, type, priority, status, dateTask, desc);
+    $("#addTaskPage").hide("slow");
   });
 });

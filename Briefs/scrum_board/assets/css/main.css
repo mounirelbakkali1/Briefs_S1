@@ -93,6 +93,7 @@ p {
   padding: 8px;
   color: white;
   border-radius: 10px;
+  border: none;
   width: 140px;
   text-align: center;
   font-family: var(--font);
