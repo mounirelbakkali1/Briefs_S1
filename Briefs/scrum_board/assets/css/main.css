@@ -8,30 +8,41 @@
   --font : 'Poppins', sans-serif;
 }
 * {
-  box-sizing: border-box;
+  box-sizing: border-box!important;
   letter-spacing: 0.5px;
+  font-size: 0.8rem;
 }
 body{
   height: 100vh;
+  width: 100vw;
+  overflow-x: hidden  ;
+  
 }
 
 header{
   background-color: var(--nav-color);
-  flex-wrap: wrap;
-  gap: 10px;
 }
 header div .butn{
   background-color: var(--btn-color);
-  min-width: 250px;
+  width: max(20%,200px);
   margin-right: 1%;
   padding: 0 20px;
   border: none;
 }
+header div .butn:hover{
+  background-color: rgb(206, 206, 206);
+}
 button.butn.create{
   justify-content: center !important;
 }
+button.butn.create:hover{
+  background-color:white;
+  color: var(--main-color);
+  outline: 1px solid var(--main-color);
+  transition: 0.5s;
+}
 .navbar-brand img{
-  width: 70%;
+  width: 50%;
 }
 .card-title {
   background-color: var(--main-color);
@@ -41,16 +52,18 @@ button.butn.create{
   font-weight: 600;
 }
 img.card-image {
-  width: 45px;
-  transform: translateY(100%);
+  width: 25px;
+  transform: translateY(160%);
   /*in order to center the element in the middle :*/
 }
 
-.iconProgress {}
+.iconProgress {
+  width: fit-content;
+}
 
 div.card {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 10% auto;
   border-radius: 10px;
   }
   
@@ -77,24 +90,80 @@ p {
 
 #addTask{
   background-color:var(--main-color);
-  padding: 10px;
+  padding: 8px;
   color: white;
   border-radius: 10px;
   width: 140px;
   text-align: center;
   font-family: var(--font);
 }
+#addTask:hover,#add:hover {
+  background-color: rgb(255, 28, 28);
+}
 .scroll {
   max-height: 67vh;
-  overflow: scroll;
+  overflow-y:auto ;
+  overflow-x: hidden;
 }
-#addTaskPage{
+#addTaskPage {
   position: absolute;
   height: 100vh;
   display: none;
   top: 0;
-  left: 10%;
-  width: 80%;
-  background-color: rgba(255, 254, 254, 0.969);
+  width: 100%;
+  background-color: rgb(153 153 153 / 55%);
+}
+#addTaskPage > div{
+    transform: translateY(10%);
+    background-color: var(--card-color);
+    padding: 5%;
 
+}
+button#cancel{
+  background-color: lightgrey;
+  color: white;
+}
+button#cancel:hover{
+  background-color: gray;
+}
+
+button#add{
+  background-color: var(--main-color);
+  color: white;
+}
+.row > div>div{
+    background-color:var(--card-color);
+    
+}
+/*styling scroll*/
+main ::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+main ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(205, 201, 201); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+main ::-webkit-scrollbar-thumb {
+  background: rgb(228, 114, 114); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+main ::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+/*end*/
+
+.navbar-toggler-icon{
+  background-image: url("../img/icons8-menu-60.png");
+  width: 26px;
+  
+}
+button:focus {
+  outline: none !important;
+  box-shadow: none!important;
 }

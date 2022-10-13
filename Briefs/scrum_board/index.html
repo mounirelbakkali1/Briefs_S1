@@ -14,12 +14,12 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg mx-5">
+  <nav class="navbar navbar-expand-lg mx-lg-5 p-0">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" style="color: black;"></span>
       </button>
       <div class="collapse navbar-collapse" style="flex-grow: 0;" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -28,102 +28,32 @@
           </li>
         </ul>
       </div>
-      </div>
-      </nav>
-  <header class="container-fluid flex-wrap gap-3 px-5 py-4 ">
-    <div class="d-flex">
-      <button class="butn p-2 d-flex justify-content-between"><span>Workspace</span><img style="width: 15px;"
+    </div>
+  </nav>
+  <header class="container-fluid  px-5 py-4 ">
+    <div class="d-flex flex-nowrap">
+      <button class="butn p-2 d-flex justify-content-between h6"><span>Workspace</span><img style="width: 15px;"
           src="./assets/img/icons8-expand-arrow-30.png" alt="" srcset=""></button>
-      <button class="butn p-2 d-flex justify-content-between"><span>Team</span><img style="width: 15px;"
+      <button class="butn p-2 d-flex justify-content-between h6"><span>Team</span><img style="width: 15px;"
           src="./assets/img/icons8-expand-arrow-30.png" alt="" srcset=""></button>
-      <button class="butn p-2 d-flex justify-content-between"><span>Modeles</span><img style="width: 15px;"
+      <button class="butn p-2 d-flex justify-content-between h6"><span>Modeles</span><img style="width: 15px;"
           src="./assets/img/icons8-expand-arrow-30.png" alt="" srcset=""></button>
-      <button class="butn create p-2 d-flex justify-content-between">Create </button>
-      </div>
-      </header>
-      <main class="container-fluid p-5">
-        <div class="row">
-  <!--Column 1 -->
-        <div class="col-lg-4 p-3 rounded-1 bg-light">
-        <div class="card-title rounded-3 p-2">
-          To do
-        </div>
-        <div class="scroll d-grid gap-3 pt-3">
-          <!--card 1-->
-        <div class="card px-2 w-100 " style="width: 18rem;">
-          <div class="iconProgress">
-            <img class="card-image" src="./assets/img/icons8-cloud-waiting-100.png" alt="" srcset="">
+      <button class="butn create p-2 d-flex justify-content-between h6">Create </button>
+    </div>
+  </header>
+  <main class="container pt-3 ">
+    <div class="row d-flex gx-lg-5 ">
+      <!--Column 1 -->
+      <div class="col-lg-4 p-3 " >
+        <div class="p-3 rounded-3 ">
+          <div class="card-title rounded-3 p-2">
+            To do
           </div>
-          <!--card body-->
-          <div class="card-body pb-1">
-            <h5 class="card-text">Something to do bla bla </h5>
-            <!--Date-->
-            <p>#1 assigned in 22/09/2022</p>
-            <!--task details-->
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <!--card footer-->
-            <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-              <button class="feature">feature</button>
-              <!--task priority-->
-              <button class="priority">high</button>
-              </div>
-              </div>
-              </div>
-              <!--card 2-->
-        <div class="card px-2 w-100 " style="width: 18rem;">
-          <div class="iconProgress">
-            <img class="card-image" src="./assets/img/icons8-cloud-waiting-100.png" alt="" srcset="">
-          </div>
-          <!--card body-->
-          <div class="card-body pb-1">
-            <h5 class="card-text">Something to do bla bla </h5>
-            <!--Date-->
-            <p>#1 assigned in 22/09/2022</p>
-            <!--task details-->
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <!--card footer-->
-            <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-              <button class="feature">feature</button>
-              <!--task priority-->
-              <button class="priority">high</button>
-            </div>
-          </div>
-        </div>
-        <!--card 3-->
-        <div class="card px-2 w-100 " style="width: 18rem;">
-          <div class="iconProgress">
-            <img class="card-image" src="./assets/img/icons8-cloud-waiting-100.png" alt="" srcset="">
-          </div>
-          <!--card body-->
-          <div class="card-body pb-1">
-            <h5 class="card-text">Something to do bla bla </h5>
-            <!--Date-->
-            <p>#1 assigned in 22/09/2022</p>
-            <!--task details-->
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <!--card footer-->
-            <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-              <button class="feature">feature</button>
-              <!--task priority-->
-              <button class="priority">high</button>
-            </div>
-            </div>
-            </div>
-        </div>
-            </div>
-  <!--Column 2 -->
-          <div class="col-lg-4 p-3 rounded-1 bg-light">
-            <div class="card-title rounded-3 p-2">
-              Doing
-            </div>
-           <div class="scroll d-grid gap-3 pt-3">
-             <!--card 1-->
-             <div class="card px-2 w-100 " style="width: 18rem;">
+          <div class="scroll d-grid gap-3 pt-3" id="toDo">
+            <!--card 1-->
+            <div class="card px-2 w-100 " style="width: 18rem;">
               <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-wait-96.png" alt="" srcset="">
+                <img class="card-image" src="./assets/img/icons8-cloud-waiting-100.png" alt="" srcset="">
               </div>
               <!--card body-->
               <div class="card-body pb-1">
@@ -131,17 +61,72 @@
                 <!--Date-->
                 <p>#1 assigned in 22/09/2022</p>
                 <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
                   content.</p>
                 <!--card footer-->
                 <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
                   <button class="feature">feature</button>
                   <!--task priority-->
                   <button class="priority">high</button>
-                  </div>
-                  </div>
-                  </div>
-                  <!--card 2-->
+                </div>
+              </div>
+            </div>
+            <!--card 2-->
+            <div class="card px-2 w-100 " style="width: 18rem;">
+              <div class="iconProgress">
+                <img class="card-image" src="./assets/img/icons8-cloud-waiting-100.png" alt="" srcset="">
+              </div>
+              <!--card body-->
+              <div class="card-body pb-1">
+                <h5 class="card-text">Something to do bla bla </h5>
+                <!--Date-->
+                <p>#1 assigned in 22/09/2022</p>
+                <!--task details-->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+                <!--card footer-->
+                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
+                  <button class="feature">feature</button>
+                  <!--task priority-->
+                  <button class="priority">high</button>
+                </div>
+              </div>
+            </div>
+            <!--card 3-->
+            <div class="card px-2 w-100 " style="width: 18rem;">
+              <div class="iconProgress">
+                <img class="card-image" src="./assets/img/icons8-cloud-waiting-100.png" alt="" srcset="">
+              </div>
+              <!--card body-->
+              <div class="card-body pb-1">
+                <h5 class="card-text">Something to do bla bla </h5>
+                <!--Date-->
+                <p>#1 assigned in 22/09/2022</p>
+                <!--task details-->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+                <!--card footer-->
+                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
+                  <button class="feature">feature</button>
+                  <!--task priority-->
+                  <button class="priority">high</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Column 2 -->
+      <div class="col-lg-4 p-3 " >
+        <div class="p-3 rounded-3">
+          <div class="card-title rounded-3 p-2">
+            Doing
+          </div>
+          <div class="scroll d-grid gap-3 pt-3" id="doing">
+            <!--card 1-->
             <div class="card px-2 w-100 " style="width: 18rem;">
               <div class="iconProgress">
                 <img class="card-image" src="./assets/img/icons8-wait-96.png" alt="" srcset="">
@@ -152,7 +137,30 @@
                 <!--Date-->
                 <p>#1 assigned in 22/09/2022</p>
                 <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+                <!--card footer-->
+                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
+                  <button class="feature">feature</button>
+                  <!--task priority-->
+                  <button class="priority">high</button>
+                </div>
+              </div>
+            </div>
+            <!--card 2-->
+            <div class="card px-2 w-100 " style="width: 18rem;">
+              <div class="iconProgress">
+                <img class="card-image" src="./assets/img/icons8-wait-96.png" alt="" srcset="">
+              </div>
+              <!--card body-->
+              <div class="card-body pb-1">
+                <h5 class="card-text">Something to do bla bla </h5>
+                <!--Date-->
+                <p>#1 assigned in 22/09/2022</p>
+                <!--task details-->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
                   content.</p>
                 <!--card footer-->
                 <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
@@ -173,7 +181,8 @@
                 <!--Date-->
                 <p>#1 assigned in 22/09/2022</p>
                 <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
                   content.</p>
                 <!--card footer-->
                 <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
@@ -181,17 +190,20 @@
                   <!--task priority-->
                   <button class="priority">high</button>
                 </div>
-                </div>
-                </div>
-           </div>
+              </div>
             </div>
-  <!--Column 3-->
-          <div class="col-lg-4 p-3  rounded-1 bg-light">
-            <div class="card-title rounded-3 p-2">
-              Done
-            </div>
-            <div class="scroll d-grid gap-3 pt-3">
-              <!--card 1-->
+          </div>
+        </div>
+      </div>
+      <!--Column 3-->
+
+      <div class="col-lg-4 p-3  " >
+        <div class="p-3 rounded-3">
+          <div class="card-title rounded-3 p-2">
+            Done
+          </div>
+          <div class="scroll d-grid gap-3 pt-3" id="done">
+            <!--card 1-->
             <div class="card px-2 w-100 " style="width: 18rem;">
               <div class="iconProgress">
                 <img class="card-image" src="./assets/img/icons8-checkmark-96.png" alt="" srcset="">
@@ -202,28 +214,8 @@
                 <!--Date-->
                 <p>#1 assigned in 22/09/2022</p>
                 <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                  </div>
-                  </div>
-                  </div>
-                  <!--card 2-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-checkmark-96.png" alt="" srcset="">
-              </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
                   content.</p>
                 <!--card footer-->
                 <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
@@ -233,100 +225,75 @@
                 </div>
               </div>
             </div>
-            <!--card 3-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-checkmark-96.png" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="addTaskPage">
+    <div class="container">
+      <div class="row w-75 m-auto">
+        <div class="col">
+          <h3 class="h3">Add Task</h3>
+          <form action="">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control  p-1" id="taskTitle" required>
+                  <label for="taskTitle">Title</label>
+                </div>
+                <label for="">Type</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="feature" value="feature"
+                    >
+                  <label class="form-check-label" for="feature">
+                    Feature
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="bug" value="bug">
+                  <label class="form-check-label" for="bug">
+                    Bug
+                  </label>
+                </div>
+                <label for="">Priority</label>
+                <select class="form-select p-3" aria-label="Default select example" required id="priorityField">
+                  <option class="h6" value="High">High</option>
+                  <option class="h6" value="Medium">Medium</option>
+                  <option class="h6" value="low">low</option>
+                </select>
+                <label for="">Status</label>
+                <select class="form-select p-3" aria-label="Default select example" required id="statusField">
+                  <option class="h6" value="To do">To do</option>
+                  <option class="h6" value="Doing">Doing</option>
+                  <option class="h6" value="Done">Done</option>
+                </select>
+                <label for="">Date</label>
+                <input type="date" class="form-control mb-2 p-3" required id="date">
+                
+
               </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
+              <div class="col-lg-6"  >
+                <div class="form-floating" style="height: 100%;">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="description" style="height: 100%" required></textarea>
+                  <label for="description">Description</label>
                 </div>
-                </div>
-                </div>
-                <!--card 3-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-checkmark-96.png" alt="" srcset="">
               </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                </div>
-                </div>
-                </div>
-                <!--card 3-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-checkmark-96.png" alt="" srcset="">
-              </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                </div>
-                </div>
-                </div>
-                <!--card 3-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-checkmark-96.png" alt="" srcset="">
-              </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                </div>
-                </div>
-                </div>
             </div>
+            <div class="d-flex justify-content-end mt-3">
+              <button class="btn me-2 " id="cancel" style="width: 80px;">Cancel</button>
+              <button class="btn" id="add" style="width: 80px;">Add</button>
             </div>
-            </div>
-            </main>
-            <div id="addTaskPage">
-            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
-  <script src="./assets/js/jquery-3.6.js"></script>
-  <script src="./assets/js/main.js"></script>
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+<script src="./assets/js/jquery-3.6.js"></script>
+<script src="./assets/js/main.js"></script>
 
 </html>
