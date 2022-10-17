@@ -100,9 +100,12 @@ button.updateTask {
   top: 5px;
   right: 30px;
 }
-.card.task:hover,button.updateTask:hover,button.delTask:hover{
+.card.task,button.updateTask:hover,button.delTask:hover{
   box-shadow:0 5px 5px 0 rgba(136, 134, 134, 0.2),0 5px 5px 0 rgba(136, 134, 134, 0.2) !important;
-}  
+} 
+.card.task:hover{
+  box-shadow: none !important;
+} 
 .card-footer {
     padding-right: 0px;
 }
