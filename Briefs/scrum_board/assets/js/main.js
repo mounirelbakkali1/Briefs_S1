@@ -1,4 +1,3 @@
-window.location.reload();
 var statusImg = [
   "icons8-cloud-waiting-100.png",
   "icons8-wait-96.png",
@@ -113,6 +112,7 @@ function clear() {
   $("#bug").attr("checked", false);
 }
 $(document).ready(function () {
+  window.location.reload();
   $("#addTask").click(function () {
     $("#addTaskPage").toggle("slow");
   });
