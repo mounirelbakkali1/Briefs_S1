@@ -8,12 +8,14 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font awsome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Scrum Board</title>
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/normalize.css">
 </head>
 
-<body>
+<body class="night dark-scheme">
   <nav class="navbar navbar-expand-lg mx-lg-5 p-0">
     <div class="container-fluid">
       <a class="navbar-brand" href=""><img src="./assets/img/logo.png" alt=""></a>
@@ -30,7 +32,7 @@
       </div>
     </div>
   </nav>
-  <header class="container-fluid  px-5 py-4 ">
+  <header class="container-fluid  px-5 py-4 " style="display: none;">
     <div class="d-flex flex-nowrap">
       <button class="butn p-2 d-flex justify-content-between h6"><span>Workspace</span><img style="width: 15px;"
           src="./assets/img/icons8-expand-arrow-30.png" alt="" srcset=""></button>
@@ -41,190 +43,39 @@
       <button class="butn create p-2 d-flex justify-content-between h6">Create </button>
     </div>
   </header>
-  <main class="container pt-3 ">
+  <main class="container">
     <div class="row d-flex gx-lg-5 ">
       <!--Column 1 -->
-      <div class="col-lg-4 p-3 " >
+      <div class="col-lg-4 p-3 ">
         <div class="p-3 rounded-3 ">
           <div class="card-title rounded-3 p-2">
-            To do
+            To Do
           </div>
           <div class="scroll d-grid gap-3 pt-3" id="toDo">
-            <!--card 1-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-cloud-waiting-100.png" alt="" srcset="">
-              </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                </div>
-              </div>
-            </div>
-            <!--card 2-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-cloud-waiting-100.png" alt="" srcset="">
-              </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                </div>
-              </div>
-            </div>
-            <!--card 3-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-cloud-waiting-100.png" alt="" srcset="">
-              </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                </div>
-              </div>
-            </div>
+            <!--tasks-->
           </div>
         </div>
       </div>
       <!--Column 2 -->
-      <div class="col-lg-4 p-3 " >
+      <div class="col-lg-4 p-3 ">
         <div class="p-3 rounded-3">
           <div class="card-title rounded-3 p-2">
-            Doing
+            In Progress
           </div>
           <div class="scroll d-grid gap-3 pt-3" id="doing">
-            <!--card 1-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-wait-96.png" alt="" srcset="">
-              </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                </div>
-              </div>
-            </div>
-            <!--card 2-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-wait-96.png" alt="" srcset="">
-              </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                </div>
-              </div>
-            </div>
-            <!--card 3-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-wait-96.png" alt="" srcset="">
-              </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                </div>
-              </div>
-            </div>
+            <!--tasks-->
           </div>
         </div>
       </div>
       <!--Column 3-->
 
-      <div class="col-lg-4 p-3  " >
+      <div class="col-lg-4 p-3  ">
         <div class="p-3 rounded-3">
           <div class="card-title rounded-3 p-2">
             Done
           </div>
           <div class="scroll d-grid gap-3 pt-3" id="done">
-            <!--card 1-->
-            <div class="card px-2 w-100 " style="width: 18rem;">
-              <div class="iconProgress">
-                <img class="card-image" src="./assets/img/icons8-checkmark-96.png" alt="" srcset="">
-              </div>
-              <!--card body-->
-              <div class="card-body pb-1">
-                <h5 class="card-text">Something to do bla bla </h5>
-                <!--Date-->
-                <p>#1 assigned in 22/09/2022</p>
-                <!--task details-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's
-                  content.</p>
-                <!--card footer-->
-                <div class="card-footer bg-transparent d-flex justify-content-end border-top-0 pt-1">
-                  <button class="feature">feature</button>
-                  <!--task priority-->
-                  <button class="priority">high</button>
-                </div>
-              </div>
-            </div>
+            <!--tasks-->
           </div>
         </div>
       </div>
@@ -236,53 +87,71 @@
         <div class="col">
           <h3 class="h3">Add Task</h3>
           <form action="">
+            <p class="h5 text-danger" id="validation" style="transition: 0.5s;"></p>
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-floating mb-3">
                   <input type="text" class="form-control" id="taskTitle" required>
-                  <label for="taskTitle">Title</label>
+                  <label for="taskTitle">Title *</label>
                 </div>
-                <label for="">Type</label>
+                <label for="feature">Type *</label>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio"  id="feature" value="feature"
-                    >
-                  <label class="form-check-label" for="feature">
+                  <input class="form-check-input" name="flexRadioDefault" type="radio" id="feature" value="feature">
+                  <label class="form-check-label" for="flexRadioDefault">
                     Feature
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio"  id="bug" value="bug">
-                  <label class="form-check-label" for="bug">
+                  <input class="form-check-input" name="flexRadioDefault" type="radio" id="bug" value="bug">
+                  <label class="form-check-label" for="flexRadioDefault">
                     Bug
                   </label>
                 </div>
-                <label for="">Priority</label>
+                <label for="priorityField">Priority *</label>
                 <select class="form-select p-3" aria-label="Default select example" required id="priorityField">
                   <option class="h6" value="High">High</option>
                   <option class="h6" value="Medium">Medium</option>
-                  <option class="h6" value="low">low</option>
+                  <option class="h6" value="Low">Low</option>
+                  <option class="h6" value="Critical">Critical</option>
                 </select>
-                <label for="">Status</label>
+                <label for="statusField">Status *</label>
                 <select class="form-select p-3" aria-label="Default select example" required id="statusField">
-                  <option class="h6" value="To do">To do</option>
-                  <option class="h6" value="Doing">Doing</option>
+                  <option class="h6" value="To Do">To Do</option>
+                  <option class="h6" value="In Progress">In Progress</option>
                   <option class="h6" value="Done">Done</option>
                 </select>
-                <label for="">Date</label>
+                <label for="date">Date *</label>
                 <input type="date" class="form-control mb-2 p-3" required id="date">
-                
+
 
               </div>
-              <div class="col-lg-6"  >
-                <div class="form-floating" style="height: 100%;">
-                  <textarea class="form-control" placeholder="Leave a comment here" id="description" style="height: 100%" required></textarea>
-                  <label for="description">Description</label>
+              <div class="col-lg-6">
+                <div class="form-floating" style="height: 78%;">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="description" style="height:100%"
+                    required></textarea>
+                  <label for="description">Description *</label>
                 </div>
+                <label for="etiquette">Etiquette *</label>
+                <select class="form-select p-3 mb-2" aria-label="Default select example" required id="bgField">
+                  <option class="h6" value="white" style="background-color: white;">white</option>
+                  <option class="h6" value="linen" style="background-color: linen;">linen</option>
+                  <option class="h6" value="lightyellow" style="background-color: lightyellow;">lightyellow</option>
+                  <option class="h6" value="snow" style="background-color: snow;">snow</option>
+                  <option class="h6" value="aliceblue" style="background-color: aliceblue;">aliceblue</option>
+                  <option class="h6" value="antiquewhite" style="background-color: antiquewhite;">antiquewhite</option>
+                  <option class="h6" value="azure" style="background-color: azure;">azure</option>
+                  <option class="h6" value="cornsilk" style="background-color: cornsilk;">cornsilk</option>
+                  <option class="h6" value="floralwhite" style="background-color: floralwhite;">floralwhite</option>
+                  <option class="h6" value="transparent" style="background-color: transparent;">transparent</option>
+                </select>
+                <small>* all fields required</small>
               </div>
+              
             </div>
             <div class="d-flex justify-content-end mt-3">
-              <button class="btn me-2 " onclick="return false"id="cancel" style="width: 80px;">Cancel</button><!-- return to prevent reload page-->
-              <button class="btn" onclick="return false"  id="add" style="width: 80px;">Add</button>
+              <button class="btn me-2 " id="cancel"
+                style="width: 80px;z-index:10 ;"  onclick="return false" >Cancel</button><!-- return to prevent reload page-->
+              <button class="btn" onclick="return false"  id="add" style="width: 80px;z-index:10 ;">Add</button>
             </div>
           </form>
         </div>
@@ -294,6 +163,8 @@
     crossorigin="anonymous"></script>
 </body>
 <script src="./assets/js/jquery-3.6.js"></script>
-<script src="./assets/js/main.js"></script>
+<script src="./assets/js/data.js" ></script>
+<script src="./assets/js/main.js" ></script>
+
 
 </html>

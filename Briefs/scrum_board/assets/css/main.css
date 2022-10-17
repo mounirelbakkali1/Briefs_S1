@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600;1,800&display=swap');
 :root{
   --main-color:#ff5959;
+  --background:white;;
   --nav-color:#FFF6F6;
   --btn-color:#F1E9E9;
   --card-color:#EFEFEF;
   --p-color: #98999a;
+  --low-color:#ff666c;
+  --high-color:#b20b00;
+  --medium-color:#f91800;
+  --bug-color:#f91a00;
+  --feature-color:#ff666c;
   --font : 'Poppins', sans-serif;
 }
 * {
@@ -16,6 +22,7 @@ body{
   height: 100vh;
   width: 100vw;
   overflow-x: hidden  ;
+  background-color: var(--background);
   
 }
 
@@ -63,11 +70,40 @@ img.card-image {
 
 div.card {
   display: grid;
-  grid-template-columns: 10% auto;
+  grid-template-columns: 7% 93%;
   border-radius: 10px;
-  }
-  
-  .card-footer {
+}
+div.card :hover .delTask,div.card :hover .updateTask{
+  display: block;
+}
+div.card-body button{
+  border: none;
+}
+div.card-body h5{
+  width: 80%;
+}
+button.delTask {
+  width: 15px;
+  display: none;
+  padding: 0px;
+  background-color: transparent !important;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+button.updateTask {
+  width: 15px;
+  display: none;
+  padding: 0px;
+  background-color: transparent !important;
+  position: absolute;
+  top: 5px;
+  right: 30px;
+}
+.card.task:hover,button.updateTask:hover,button.delTask:hover{
+  box-shadow:0 5px 5px 0 rgba(136, 134, 134, 0.2),0 5px 5px 0 rgba(136, 134, 134, 0.2) !important;
+}  
+.card-footer {
     padding-right: 0px;
 }
 .card-footer button{
@@ -87,6 +123,10 @@ p {
   margin-bottom: 2px;
   color: var(--p-color);
 }
+form{
+  display: grid;
+  gap: 25px;
+}
 
 #addTask{
   background-color:var(--main-color);
@@ -102,7 +142,8 @@ p {
   background-color: rgb(255, 28, 28);
 }
 .scroll {
-  max-height: 67vh;
+  max-height: 78vh;
+  padding: 2%;
   overflow-y:auto ;
   overflow-x: hidden;
 }
@@ -128,7 +169,7 @@ button#cancel:hover{
   background-color: gray;
 }
 
-button#add{
+button#add,button#update{
   background-color: var(--main-color);
   color: white;
 }
@@ -164,7 +205,12 @@ main ::-webkit-scrollbar-thumb:hover {
   width: 26px;
   
 }
-button:focus {
+button.btn:focus {
   outline: none !important;
   box-shadow: none!important;
 }
+option:hover,option:active{
+  background:transparent !important; 
+}
+
+  
