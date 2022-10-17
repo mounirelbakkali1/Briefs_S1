@@ -7,6 +7,9 @@ var arrOfTask = [];
 const res = localStorage.getItem("arrOfTasks");
 if (res == undefined) {
   localStorage.setItem("arrOfTasks", JSON.stringify(arrOfTasks));
+  setTimeout(() => {
+    window.location.reload();
+  }, 1000);
 } else {
   arrOfTask = JSON.parse(localStorage.getItem("arrOfTasks") || "[]");
   arrOfTask.forEach((task) => {
@@ -112,7 +115,6 @@ function clear() {
   $("#bug").attr("checked", false);
 }
 $(document).ready(function () {
-  window.location.reload();
   $("#addTask").click(function () {
     $("#addTaskPage").toggle("slow");
   });
