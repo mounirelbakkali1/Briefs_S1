@@ -62,7 +62,8 @@ function addTaskNode(
   bg,
   id
 ) {
-  var card = `<div class="card px-2 w-100 task" style="width: 18rem;background-color:${bg}!important;" id="task_${id}">
+  var card = `
+  <div class="card px-2 w-100 task" style="width: 18rem;background-color:${bg}!important;" id="task_${id}">
 <div class="iconProgress">
     <img class="card-image" src="./assets/img/${checkStatus(
       status
@@ -125,8 +126,9 @@ $(document).ready(function () {
   $(".delTask").click(function () {
     var id_to_be_deleted = $(this).parent().parent().attr("id").split("_")[1];
     const pos = arrOfTask.map((t) => t.id).indexOf(parseInt(id_to_be_deleted));
+    //alert(pos);
     arrOfTask.splice(pos, 1);
-    localStorage.setItem("arrOfTask", JSON.stringify(arrOfTask));
+    localStorage.setItem("arrOfTasks", JSON.stringify(arrOfTask));
     window.location.reload();
   });
   $(".updateTask").click(function () {
@@ -163,7 +165,7 @@ $(document).ready(function () {
         description: changes.description,
       };
       if (verifyInputs(changes.title, changes.date, changes.description)) {
-        arrOfTask.splice(position, 1, updatedNode);
+        arrOfTask.splice(position, 1, updatedNode); /// remplace object in position with updated node
         localStorage.setItem("arrOfTasks", JSON.stringify(arrOfTask));
         window.location.reload();
       } else {
@@ -175,7 +177,6 @@ $(document).ready(function () {
 
   $("#add").click(function () {
     const inputsValues = getInputs();
-    //alert($(this).attr("id"));
     if ($(this).attr("id") == "update") {
       return; // to prevent adding node
     } else {

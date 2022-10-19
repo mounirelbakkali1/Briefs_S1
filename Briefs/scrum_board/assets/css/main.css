@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600;1,800&display=swap');
 :root{
-  --main-color:#ff5959;
-  --background:white;;
-  --nav-color:#FFF6F6;
-  --btn-color:#F1E9E9;
-  --card-color:#EFEFEF;
+  --main-color: #ec6161;
+  --background: #dfdfdf;
+  --nav-color: #FFF6F6;
+  --btn-color: #F1E9E9;
+  --card-color: #EFEFEF;
   --p-color: #98999a;
-  --low-color:#ff666c;
-  --high-color:#b20b00;
-  --medium-color:#f91800;
-  --bug-color:#f91a00;
-  --feature-color:#ff666c;
-  --font : 'Poppins', sans-serif;
+  --low-color: #ff666c;
+  --high-color: #b20b00;
+  --medium-color: #f91800;
+  --bug-color: #f91a00;
+  --feature-color: #ff666c;
+  --font: 'Poppins', sans-serif;
 }
+
+
 * {
   box-sizing: border-box!important;
   letter-spacing: 0.5px;
